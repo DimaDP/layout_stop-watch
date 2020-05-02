@@ -1,2 +1,73 @@
+@-webkit-keyframes hand__run {
+  from {
+    transform-origin: 50% 100%;
+    transform: rotate(0); }
+  to {
+    transform-origin: 50% 100%;
+    transform: rotate(360deg); } }
+
+@keyframes hand__run {
+  from {
+    transform-origin: 50% 100%;
+    transform: rotate(0); }
+  to {
+    transform-origin: 50% 100%;
+    transform: rotate(360deg); } }
+
+.anim__minutes--hand {
+  -webkit-animation: hand__run 3600s linear infinite;
+          animation: hand__run 3600s linear infinite; }
+
+.anim__seconds--hand {
+  -webkit-animation: hand__run 60s steps(60, end) infinite;
+          animation: hand__run 60s steps(60, end) infinite; }
+
+body {
+  margin: 0;
+  background-color: #b6d8d5; }
+
+.watch {
+  margin-top: 200px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column; }
+
+.watch__minutes--hand {
+  box-sizing: border-box;
+  border: 2px solid #c45238;
+  background-color: #84b0af;
+  width: 8px;
+  height: 200px;
+  z-index: -2; }
+
+.watch__seconds--hand {
+  box-sizing: border-box;
+  border: 2px solid #c45238;
+  background-color: #84b0af;
+  position: relative;
+  width: 6px;
+  height: 250px;
+  bottom: 250px; }
+
+.watch__seconds--hand:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 240px;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  border: 10px solid #c45238;
+  border-radius: 50%; }
+
+.watch__face {
+  box-sizing: border-box;
+  height: 500px;
+  width: 500px;
+  border: 2px solid #c45238;
+  border-radius: 50%;
+  position: relative;
+  bottom: 500px; }
 
 /*# sourceMappingURL=main.css.map */
