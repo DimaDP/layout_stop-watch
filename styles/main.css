@@ -25,45 +25,36 @@ body {
   border-radius: 50%;
   margin: 200px;
   position: relative; }
-
-.watch__minutes {
-  box-sizing: border-box;
-  border: 2px solid #c45238;
-  background-color: #84b0af;
-  position: absolute;
-  width: 8px;
-  height: 40%;
-  bottom: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  -webkit-animation: hand--move 3600s linear infinite;
-          animation: hand--move 3600s linear infinite; }
-
-.watch__seconds {
-  box-sizing: border-box;
-  border: 2px solid #c45238;
-  background-color: #84b0af;
-  position: absolute;
-  width: 6px;
-  height: 50%;
-  bottom: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  -webkit-animation: hand--move 60s steps(60, end) infinite;
-          animation: hand--move 60s steps(60, end) infinite; }
-
-.watch__center {
-  position: absolute;
-  left: 0;
-  right: 0;
-  box-sizing: border-box;
-  bottom: 48%;
-  margin: 0 auto;
-  height: 4%;
-  width: 4%;
-  border: 10px solid #c45238;
-  border-radius: 50%; }
+  .watch__minutes, .watch__seconds {
+    box-sizing: border-box;
+    border: 2px solid #c45238;
+    background-color: #84b0af;
+    position: absolute;
+    width: 8px;
+    height: 40%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-animation: hand--move 3600s linear infinite;
+            animation: hand--move 3600s linear infinite; }
+  .watch__seconds {
+    width: 6px;
+    height: 50%;
+    -webkit-animation-duration: 60s;
+            animation-duration: 60s;
+    -webkit-animation-timing-function: steps(60, end);
+            animation-timing-function: steps(60, end); }
+  .watch .watch__center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    bottom: 48%;
+    margin: 0 auto;
+    height: 4%;
+    width: 4%;
+    border: 10px solid #c45238;
+    border-radius: 50%; }
 
 /*# sourceMappingURL=main.css.map */
